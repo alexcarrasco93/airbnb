@@ -1,0 +1,28 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.navbar {
+    display: none;
+
+    @include m.tablet {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__navigation {
+        @include m.tablet {
+            display: flex;
+            gap: 4rem;
+        }
+    }
+
+    &__link {
+        color: v.$white;
+    }
+
+    &__name {
+        color: v.$white;
+        margin: 0;
+    }
+}

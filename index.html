@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AirBNB - BEM</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300,400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="build/css/app.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="navbar container">
+            <div class="navbar__logo">
+                <p class="navbar__name">Travel</p>
+            </div>
+
+            <nav class="navbar__navigation">
+                <a class="navbar__link" href="#">Places to stay</a>
+                <a class="navbar__link" href="#">Experiences</a>
+                <a class="navbar__link" href="#">Online experiences</a>
+            </nav>
+
+            <nav class="navbar__login">
+                <a class="navbar__link" href="#">Become a Host</a>
+            </nav>
+        </div>
+
+        <form class="form container">
+            <div class="form__field">
+                <label for="ubication" class="form__label">Where</label>
+                <input type="text" class="form__input" id="ubication" placeholder="Search destination">
+            </div>
+            <div class="form__field">
+                <label for="check-in" class="form__label">Check in</label>
+                <input type="date" class="form__input" id="check-in">
+            </div>
+            <div class="form__field">
+                <label for="check-out" class="form__label">Check out</label>
+                <input type="date" class="form__input" id="check-out">
+            </div>
+            <div class="form__field">
+                <label for="guests" class="form__label">Who</label>
+                <input type="number" class="form__input" id="guests" placeholder="Add guests">
+            </div>
+            <div class="form__field">
+                <input type="submit" class="form__submit" value="Search">
+            </div>
+        </form>
+
+        <div class="header__search container">
+            <p class="header__search-label">Don't you know where to go?</p>
+            <a href="#" class="header__search-btn">Flexible Search</a>
+        </div>
+    </header>
+
+    <section class="destinations container section">
+        <h2 class="destinations__heading">Discover popular accommodations</h2>
+
+        <ul class="destinations__grid">
+            <li class="destination">
+                <div class="destination__img">
+                    <picture>
+                        <source srcset="build/img/icono_destino_1.avif" type="image/avif">
+                        <source srcset="build/img/icono_destino_1.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/icono_destino_1.jpg" alt="destination image">
+                    </picture>
+                </div>
+
+                <div class="destination__info">
+                    <h3 class="destination__name">New York</h3>
+                    <p class="destination__distance">4 hours by plane</p>
+                </div>
+            </li>
+            <li class="destination">
+                <div class="destination__img">
+                    <picture>
+                        <source srcset="build/img/icono_destino_2.avif" type="image/avif">
+                        <source srcset="build/img/icono_destino_2.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/icono_destino_2.jpg" alt="destination image">
+                    </picture>
+                </div>
+
+                <div class="destination__info">
+                    <h3 class="destination__name">Paris</h3>
+                    <p class="destination__distance">4 hours by plane</p>
+                </div>
+            </li>
+            <li class="destination">
+                <div class="destination__img">
+                    <picture>
+                        <source srcset="build/img/icono_destino_3.avif" type="image/avif">
+                        <source srcset="build/img/icono_destino_3.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/icono_destino_3.jpg" alt="destination image">
+                    </picture>
+                </div>
+
+                <div class="destination__info">
+                    <h3 class="destination__name">San Francisco</h3>
+                    <p class="destination__distance">4 hours by plane</p>
+                </div>
+            </li>
+            <li class="destination">
+                <div class="destination__img">
+                    <picture>
+                        <source srcset="build/img/icono_destino_4.avif" type="image/avif">
+                        <source srcset="build/img/icono_destino_4.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/icono_destino_4.jpg" alt="destination image">
+                    </picture>
+                </div>
+
+                <div class="destination__info">
+                    <h3 class="destination__name">Egypt</h3>
+                    <p class="destination__distance">4 hours by plane</p>
+                </div>
+            </li>
+            <li class="destination">
+                <div class="destination__img">
+                    <picture>
+                        <source srcset="build/img/icono_destino_5.avif" type="image/avif">
+                        <source srcset="build/img/icono_destino_5.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/icono_destino_5.jpg" alt="destination image">
+                    </picture>
+                </div>
+
+                <div class="destination__info">
+                    <h3 class="destination__name">London</h3>
+                    <p class="destination__distance">4 hours by plane</p>
+                </div>
+            </li>
+            <li class="destination">
+                <div class="destination__img">
+                    <picture>
+                        <source srcset="build/img/icono_destino_6.avif" type="image/avif">
+                        <source srcset="build/img/icono_destino_6.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/icono_destino_6.jpg" alt="destination image">
+                    </picture>
+                </div>
+
+                <div class="destination__info">
+                    <h3 class="destination__name">Italy</h3>
+                    <p class="destination__distance">4 hours by plane</p>
+                </div>
+            </li>
+            <li class="destination">
+                <div class="destination__img">
+                    <picture>
+                        <source srcset="build/img/icono_destino_7.avif" type="image/avif">
+                        <source srcset="build/img/icono_destino_7.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/icono_destino_7.jpg" alt="destination image">
+                    </picture>
+                </div>
+
+                <div class="destination__info">
+                    <h3 class="destination__name">India</h3>
+                    <p class="destination__distance">4 hours by plane</p>
+                </div>
+            </li>
+            <li class="destination">
+                <div class="destination__img">
+                    <picture>
+                        <source srcset="build/img/icono_destino_8.avif" type="image/avif">
+                        <source srcset="build/img/icono_destino_8.webp" type="image/webp">
+                        <img loading="lazy" src="build/img/icono_destino_8.jpg" alt="destination image">
+                    </picture>
+                </div>
+
+                <div class="destination__info">
+                    <h3 class="destination__name">Greece</h3>
+                    <p class="destination__distance">4 hours by plane</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <section class="places container section">
+        <h2 class="places__heading">Live anywhere in the world</h2>
+
+        <div class="places__grid">
+            <div class="place">
+                <picture>
+                    <source srcset="build/img/vive_1.avif" type="image/avif">
+                    <source srcset="build/img/vive_1.webp" type="image/webp">
+                    <img class="place__img" loading="lazy" src="build/img/vive_1.jpg" alt="live section image">
+                </picture>
+
+                <p class="place__name">Outdoor getaways</p>
+            </div>
+            <div class="place">
+                <picture>
+                    <source srcset="build/img/vive_2.avif" type="image/avif">
+                    <source srcset="build/img/vive_2.webp" type="image/webp">
+                    <img class="place__img" loading="lazy" src="build/img/vive_2.jpg" alt="live section image">
+                </picture>
+
+                <p class="place__name">Unique accommodations</p>
+            </div>
+            <div class="place">
+                <picture>
+                    <source srcset="build/img/vive_3.avif" type="image/avif">
+                    <source srcset="build/img/vive_3.webp" type="image/webp">
+                    <img class="place__img" loading="lazy" src="build/img/vive_3.jpg" alt="live section image">
+                </picture>
+
+                <p class="place__name">Entire lodgings</p>
+            </div>
+            <div class="place">
+                <picture>
+                    <source srcset="build/img/vive_4.avif" type="image/avif">
+                    <source srcset="build/img/vive_4.webp" type="image/webp">
+                    <img class="place__img" loading="lazy" src="build/img/vive_4.jpg" alt="live section image">
+                </picture>
+
+                <p class="place__name">With your pet</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="host container section">
+        <div class="host__content">
+            <h2 class="host__heading">Become a Host</h2>
+            <p class="host__txt">Share your space to earn extra money and take advantage of new opportunities</p>
+            <a href="#" class="host__link">More Information</a>
+        </div>
+    </section>
+
+    <main class="experiences container section">
+        <h2 class="experiences__heading">Discover Experiences</h2>
+        <p class="experiences__description">Unique activities with local experts, in person or online.</p>
+
+        <div class="experiences__list">
+            <div class="experience">
+                <picture>
+                    <source srcset="build/img/experiencia_1.avif" type="image/avif">
+                    <source srcset="build/img/experiencia_1.webp" type="image/webp">
+                    <img class="experience__img" loading="lazy" src="build/img/experiencia_1.jpg"
+                        alt="experience image">
+                </picture>
+
+                <p class="experience__title">Experiences</p>
+                <p class="experience__description">Local activities wherever you are</p>
+            </div>
+            <div class="experience">
+                <picture>
+                    <source srcset="build/img/experiencia_2.avif" type="image/avif">
+                    <source srcset="build/img/experiencia_2.webp" type="image/webp">
+                    <img class="experience__img" loading="lazy" src="build/img/experiencia_2.jpg"
+                        alt="experience image">
+                </picture>
+
+                <p class="experience__title">Experiences</p>
+                <p class="experience__description">Visit a city and live in it.</p>
+            </div>
+            <div class="experience">
+                <picture>
+                    <source srcset="build/img/experiencia_3.avif" type="image/avif">
+                    <source srcset="build/img/experiencia_3.webp" type="image/webp">
+                    <img class="experience__img" loading="lazy" src="build/img/experiencia_3.jpg"
+                        alt="experience image">
+                </picture>
+
+                <p class="experience__title">Experiences</p>
+                <p class="experience__description">Live interactive activities</p>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer__grid container">
+            <div class="footer__box">
+                <h3 class="footer__heading">About</h3>
+
+                <nav class="footer__menu">
+                    <a href="#" class="footer__link">Link 1</a>
+                    <a href="#" class="footer__link">Link 2</a>
+                    <a href="#" class="footer__link">Link 3</a>
+                    <a href="#" class="footer__link">Link 4</a>
+                </nav>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__heading">Community</h3>
+
+                <nav class="footer__menu">
+                    <a href="#" class="footer__link">Link 1</a>
+                    <a href="#" class="footer__link">Link 2</a>
+                    <a href="#" class="footer__link">Link 3</a>
+                    <a href="#" class="footer__link">Link 4</a>
+                </nav>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__heading">Host</h3>
+
+                <nav class="footer__menu">
+                    <a href="#" class="footer__link">Link 1</a>
+                    <a href="#" class="footer__link">Link 2</a>
+                    <a href="#" class="footer__link">Link 3</a>
+                    <a href="#" class="footer__link">Link 4</a>
+                </nav>
+            </div>
+            <div class="footer__box">
+                <h3 class="footer__heading">Assistance</h3>
+
+                <nav class="footer__menu">
+                    <a href="#" class="footer__link">Link 1</a>
+                    <a href="#" class="footer__link">Link 2</a>
+                    <a href="#" class="footer__link">Link 3</a>
+                    <a href="#" class="footer__link">Link 4</a>
+                </nav>
+            </div>
+        </div>
+
+        <div class="footer__bar container">
+            <nav class="footer__navbar">
+                <a href="#" class="footer__link footer__link--bar">New Link</a>
+                <a href="#" class="footer__link footer__link--bar">New Link</a>
+                <a href="#" class="footer__link footer__link--bar">New Link</a>
+                <a href="#" class="footer__link footer__link--bar">New Link</a>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+
+</html>

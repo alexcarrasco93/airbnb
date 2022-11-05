@@ -1,0 +1,64 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.footer {
+    background-color: lighten(v.$lightGrey, 7%);
+    border-top: 1px solid lighten(v.$grey, 40%);
+    padding-top: 5rem;
+
+    &__grid {
+        @include m.tablet {
+            @include m.grid(2, 2rem);
+        }
+
+        @include m.desktop {
+            @include m.grid(4, 2rem);
+        }
+    }
+
+    &__heading,
+    &__link {
+        text-align: center;
+
+        @include m.tablet {
+            text-align: left;
+        }
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-size: 1.2rem;
+    }
+
+    &__link {
+        display: block;
+        color: v.$grey;
+        font-size: 1.4rem;
+        margin-bottom: 1rem;
+    }
+
+    &__bar {
+        border-top: 1px solid lighten(v.$grey, 40%);
+        margin-top: 2rem;
+        padding: 2rem 0;
+    }
+
+
+    &__navbar {
+        display: flex;
+        flex-direction: column;
+
+        @include m.tablet {
+            flex-direction: row;
+            gap: 2rem;
+        }
+
+    }
+
+    &__link--bar {
+        &::before {
+            content: ' - ';
+            margin-right: .5rem;
+        }
+    }
+}

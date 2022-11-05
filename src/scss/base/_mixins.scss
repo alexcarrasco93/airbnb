@@ -1,0 +1,59 @@
+@use 'variables' as v;
+
+/** Media Queries **/
+@mixin phone {
+    @media (min-width: v.$phone) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$desktop) {
+        @content;
+    }
+}
+
+
+@mixin btn($bgColor, $colorText) {
+    background-color: $bgColor;
+    padding: 2rem 4rem;
+    color: $colorText;
+    margin-top: 1rem;
+    border-radius: 3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    display: block;
+
+    @include tablet {
+        display: inline-block;
+    }
+}
+
+@mixin grid($columns, $gap) {
+    display: grid;
+    gap: $gap;
+    grid-template-columns: repeat($columns, 1fr);
+}
+
+@mixin bgImage($url, $position) {
+    background-image: url($url);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: $position;
+}
+
+@mixin scrollHorizontal {
+    overflow-y: hidden;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+
+    > * {
+        scroll-snap-align: center;
+    }
+}
